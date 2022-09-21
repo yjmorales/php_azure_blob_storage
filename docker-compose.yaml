@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: dockerization/web/Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8072:80
