@@ -1,8 +1,12 @@
 {% extends '/base.html.twig' %}
 
-{% set title = 'Render the Uploaded Image' %}
 
-{% blob content %}
+{% block categoryTitle %}
+    Render the Uploaded Image
+{% endblock %}
+
+
+{% block content %}
 <div class="row">
     <div class="col">
         {% if imageBase64 is empty %}
@@ -14,13 +18,13 @@
                     The Image has not been uploaded to Azure Blob Storage.
                 </div>
             </div>
-        {% endif %}
+        {% else %}
         <div class="row">
-            <div class="col-6 offset-3">
-                <img class="img-responsive" src="data:image/png;base64, {{ imageBase64 }}">
+            <div class="col">
+                <img class="img-fluid" src="data:image/png;base64, {{ imageBase64 }}">
             </div>
         </div>
-        {% else %}
+        {% endif %}
     </div>
 </div>
 {% endblock %}

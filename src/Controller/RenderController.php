@@ -9,7 +9,7 @@ use App\Exception\AzureBlobStorageNotFoundException;
 use App\Model\ImageModel;
 use App\Service\BlobStorageManager;
 use Exception;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -25,7 +25,7 @@ class RenderController extends AbstractController
      * Route definition to render the uploaded image to Blob Storage.
      * @Route("/", name="render_index")
      */
-    public function renderImage(BlobStorageManager $bsManager, Logger $logger): Response
+    public function renderImage(BlobStorageManager $bsManager, LoggerInterface $logger): Response
     {
         /*
          * Loading the Recurring Account Signature from azure.

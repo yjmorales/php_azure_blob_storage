@@ -1,10 +1,10 @@
 parameters:
-    storageAccountName     : 'testsignature'
-    defaultEndpointProtocol: 'https'
-    containerName          : 'container-example'
-    clientId           : '5b7a2a0a-042e-4d69-8088-53fcf5e9605a'
-    tenantId           : 'a84cd936-3cb4-4d07-b1d5-a93d8a5eab56'
-    clientSecret       : '-_48Q~BY4sqatQEbXhwUwfzjpYnGCVxp09Elxb-Q'
+    azure_blob_storage.storageAccountName     : '%env(AZURE_BLOB_STORAGE_STORAGE_ACCOUNT_NAME)%'
+    azure_blob_storage.defaultEndpointProtocol: 'https'
+    azure_blob_storage.containerName          : 'container-name-example'
+    azure_active_directory.clientId           : '%env(AZURE_BLOB_STORAGE_CLIENT_ID)%'
+    azure_active_directory.tenantId           : '%env(AZURE_BLOB_STORAGE_TENANT_ID)%'
+    azure_active_directory.clientSecret       : '%env(AZURE_BLOB_STORAGE_CLIENT_SECRET)%'
     
 services:
     _defaults:
@@ -15,44 +15,43 @@ services:
     App\:
         resource: '../src/'
         exclude:
-
             - '../src/Kernel.php'
 
     App\Controller\:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
-    CacheRegistry:
+    App\Service\CacheRegistry:
         class: App\Service\CacheRegistry
         public: true
         arguments:
             - '%redis_host%'
-            - cache_
+            - 'cache_'
             - '%redis_password%'
             - '%redis_port%'
 
-    UploadCache:
+    App\Service\UploadCache:
         class: App\Service\UploadCache
         public: true
         arguments:
-            - '@CacheRegistry'
+            - '@App\Service\CacheRegistry'
             - 1200 # 20 minutes in seconds.
 
-    BlobStorageManager:
+    App\Service\BlobStorageManager:
         class: App\Service\BlobStorageManager
         public: true
         arguments:
-            - '@BlobStorageAuthenticator'
+            - '@App\Service\BlobStorageAuthenticator'
             - '%containerName%'
             - '@kernel'
 
-    BlobStorageAuthenticator:
+    App\Service\BlobStorageAuthenticator:
         class: App\Service\BlobStorageAuthenticator
         public: true
         arguments:
             - '%storageAccountName%'
             - '%defaultEndpointProtocol%'
-            - '@UploadCache'
+            - '@App\Service\UploadCache'
             - '%clientId%'
             - '%tenantId%'
             - '%clientSecret%'

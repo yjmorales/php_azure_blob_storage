@@ -82,31 +82,44 @@ class BlobStorageManager
      */
     public function getImage(string $imgId): string
     {
+        /*
+         * Getting the container information
+         */
+
+        $this->connect();
+        if (!$this->_existsContainer($this->_containerName)) {
+            throw new AzureBlobStorageNotFoundException("There is not defined the container");
+        }
+        $options = new ListBlobsOptions();
+        $options->setPrefix($imgId);
+        $blobs      = $this->_bsConnection->listBlobs($this->_containerName, $options)->getBlobs();
+        $blobsCount = count($blobs);
+
+        /*
+         * Validating container content
+         */
+        if (!$blobsCount) {
+            throw new AzureBlobStorageNotFoundException("There is not an image identifier by $imgId");
+        }
+
+        if ($blobsCount > 1) {
+            throw new AzureBlobStorageException("There are more than one image identified by $imgId");
+        }
+
+        /*
+         * Retrieving the content.
+         */
         try {
-            $this->connect();
-            if (!$this->_existsContainer($this->_containerName)) {
-                throw new AzureBlobStorageNotFoundException("There is not defined the container");
-            }
-            $options = new ListBlobsOptions();
-            $options->setPrefix($imgId);
-            $blobs      = $this->_bsConnection->listBlobs($this->_containerName, $options)->getBlobs();
-            $blobsCount = count($blobs);
-            if (!$blobsCount) {
-                throw new AzureBlobStorageNotFoundException("There is not an image identifier by $imgId");
-            }
-            if ($blobsCount > 1) {
-                throw new AzureBlobStorageException("There are more than one image identified by $imgId");
-            }
             $blobName     = (head($blobs))->getName();
             $tmpDir       = $this->_initTmpDir();
             $fileName     = "$tmpDir/$blobName";
             $blobResource = $this->_bsConnection->getBlob($this->_containerName, $blobName)->getContentStream();
             file_put_contents($fileName, $blobResource);
-
-            return base64_encode(file_get_contents($fileName)); // Finally returns the respective image base64 value for rendering purposes.
         } catch (Exception $e) {
             throw new AzureBlobStorageException("Unable to obtain the image identifier by $imgId", 0, $e);
         }
+
+        return base64_encode(file_get_contents($fileName)); // Finally returns the respective image base64 value for rendering purposes.
     }
 
     /**
@@ -154,7 +167,7 @@ class BlobStorageManager
      */
     private function _buildBlobName(string $imgId): string
     {
-        return "{$this->_kernel->getEnvironment()}/$imgId-" . self::CONTAINER_PREFIX;
+        return "$imgId-" . self::CONTAINER_PREFIX;
     }
 
     /**
