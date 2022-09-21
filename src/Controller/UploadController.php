@@ -11,7 +11,7 @@ use App\Service\BlobStorageManager;
 use App\Service\UploadImageValidator;
 use ArrayObject;
 use Exception;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use stdClass;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -39,18 +39,27 @@ class UploadController extends AbstractController
      * Route definition to upload an image to Azure.
      * @Route("/run", name="upload_run")
      */
-    public function upload(Request $request, BlobStorageManager $bsManager, Logger $logger): JsonResponse
+    public function upload(Request $request, BlobStorageManager $bsManager, LoggerInterface $logger): JsonResponse
     {
         /*
          * Validating the base64 value.
+         *
+         * This is the way to retrieve the base64 value from the request.
+         *      $imageBase64   = $request->query->get('imageBase64');
+         *
+         * In this example we will use a defined base64 image as example.
          */
-        $imageBase64   = $request->get('imageBase64');
+        $imageBase64   = ImageModel::EXAMPLE_BASE64;
+
         $valid         = (new UploadImageValidator())->validate($imageBase64, $errors = new ArrayObject());
         $data          = new stdClass();
         $data->success = $valid;
         $data->errors  = $errors;
         $data->code    = $valid ? Response::HTTP_OK : Response::HTTP_BAD_REQUEST;
 
+        if (!$valid) {
+            return new JsonResponse($data);
+        }
         /*
          * Uploading the image to azure
          */
