@@ -85,7 +85,6 @@ class BlobStorageManager
         /*
          * Getting the container information
          */
-
         $this->connect();
         if (!$this->_existsContainer($this->_containerName)) {
             throw new AzureBlobStorageNotFoundException("There is not defined the container");

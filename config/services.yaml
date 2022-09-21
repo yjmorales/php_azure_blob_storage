@@ -42,16 +42,16 @@ services:
         public: true
         arguments:
             - '@App\Service\BlobStorageAuthenticator'
-            - '%containerName%'
+            - '%azure_blob_storage.containerName%'
             - '@kernel'
 
     App\Service\BlobStorageAuthenticator:
         class: App\Service\BlobStorageAuthenticator
         public: true
         arguments:
-            - '%storageAccountName%'
-            - '%defaultEndpointProtocol%'
+            - '%azure_blob_storage.storageAccountName%'
+            - '%azure_blob_storage.defaultEndpointProtocol%'
             - '@App\Service\UploadCache'
-            - '%clientId%'
-            - '%tenantId%'
-            - '%clientSecret%'
+            - '%azure_active_directory.clientId%'
+            - '%azure_active_directory.tenantId%'
+            - '%azure_active_directory.clientSecret%'
