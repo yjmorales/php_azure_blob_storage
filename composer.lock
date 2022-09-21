@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d72a85d9fdf62602d518f2130ec90b7",
+    "content-hash": "f32fbb5861584f39d1f652810b62025f",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -227,164 +227,6 @@
                 }
             ],
             "time": "2022-02-28T11:07:21+00:00"
-        },
-        {
-            "name": "laminas/laminas-code",
-            "version": "4.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-code.git",
-                "reference": "0337d9265bc2e6376babad8c511500821620cb30"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/0337d9265bc2e6376babad8c511500821620cb30",
-                "reference": "0337d9265bc2e6376babad8c511500821620cb30",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4, <8.2"
-            },
-            "require-dev": {
-                "doctrine/annotations": "^1.13.2",
-                "ext-phar": "*",
-                "laminas/laminas-coding-standard": "^2.3.0",
-                "laminas/laminas-stdlib": "^3.6.1",
-                "phpunit/phpunit": "^9.5.10",
-                "psalm/plugin-phpunit": "^0.17.0",
-                "vimeo/psalm": "^4.13.1"
-            },
-            "suggest": {
-                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
-                "laminas/laminas-stdlib": "Laminas\\Stdlib component"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "polyfill/ReflectionEnumPolyfill.php"
-                ],
-                "psr-4": {
-                    "Laminas\\Code\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Extensions to the PHP Reflection API, static code scanning, and code generation",
-            "homepage": "https://laminas.dev",
-            "keywords": [
-                "code",
-                "laminas",
-                "laminasframework"
-            ],
-            "support": {
-                "chat": "https://laminas.dev/chat",
-                "docs": "https://docs.laminas.dev/laminas-code/",
-                "forum": "https://discourse.laminas.dev",
-                "issues": "https://github.com/laminas/laminas-code/issues",
-                "rss": "https://github.com/laminas/laminas-code/releases.atom",
-                "source": "https://github.com/laminas/laminas-code"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2022-09-13T10:33:30+00:00"
-        },
-        {
-            "name": "ocramius/proxy-manager",
-            "version": "2.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "37b219af4c150ff8a30ab0d10d2d68be1148ecc9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/37b219af4c150ff8a30ab0d10d2d68be1148ecc9",
-                "reference": "37b219af4c150ff8a30ab0d10d2d68be1148ecc9",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": "^2.0.0",
-                "laminas/laminas-code": "^4.3.0",
-                "php": "~7.4.1 || ~8.0.0",
-                "webimpress/safe-writer": "^2.2.0"
-            },
-            "conflict": {
-                "composer/composer": "<2.0.14",
-                "doctrine/annotations": "<1.6.1",
-                "laminas/laminas-stdlib": "<3.2.1",
-                "thecodingmachine/safe": "<1.3.3",
-                "zendframework/zend-stdlib": "<3.2.1"
-            },
-            "require-dev": {
-                "codelicia/xulieta": "^0.1.6",
-                "doctrine/coding-standard": "^8.2.1",
-                "ext-phar": "*",
-                "infection/infection": "^0.21.5",
-                "nikic/php-parser": "^4.10.5",
-                "phpbench/phpbench": "^0.17.1 || 1.0.0-alpha2",
-                "phpunit/phpunit": "^9.5.4",
-                "slevomat/coding-standard": "^6.3.10",
-                "squizlabs/php_codesniffer": "^3.6.0",
-                "vimeo/psalm": "^4.4.1"
-            },
-            "suggest": {
-                "laminas/laminas-json": "To have the JsonRpc adapter (Remote Object feature)",
-                "laminas/laminas-soap": "To have the Soap adapter (Remote Object feature)",
-                "laminas/laminas-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)",
-                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ProxyManager\\": "src/ProxyManager"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.io/"
-                }
-            ],
-            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
-            "homepage": "https://github.com/Ocramius/ProxyManager",
-            "keywords": [
-                "aop",
-                "lazy loading",
-                "proxy",
-                "proxy pattern",
-                "service proxies"
-            ],
-            "support": {
-                "issues": "https://github.com/Ocramius/ProxyManager/issues",
-                "source": "https://github.com/Ocramius/ProxyManager/tree/2.12.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Ocramius",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/ocramius/proxy-manager",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-03-05T18:39:36+00:00"
         },
         {
             "name": "paragonie/sodium_compat",
@@ -882,135 +724,6 @@
             "time": "2021-05-03T11:20:27+00:00"
         },
         {
-            "name": "sendgrid/php-http-client",
-            "version": "3.14.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sendgrid/php-http-client.git",
-                "reference": "6d589564522be290c7d7c18e51bcd8b03aeaf0b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sendgrid/php-http-client/zipball/6d589564522be290c7d7c18e51bcd8b03aeaf0b6",
-                "reference": "6d589564522be290c7d7c18e51bcd8b03aeaf0b6",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "phpunit/phpunit": "^5.7 || ^6.5",
-                "sebastian/version": "^1.0.6",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "suggest": {
-                "composer/ca-bundle": "Including this library will ensure that a valid CA bundle is available for secure connections"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SendGrid\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matt Bernier",
-                    "email": "mbernier@twilio.com"
-                },
-                {
-                    "name": "Elmer Thomas",
-                    "email": "ethomas@twilio.com"
-                }
-            ],
-            "description": "HTTP REST client, simplified for PHP",
-            "homepage": "http://github.com/sendgrid/php-http-client",
-            "keywords": [
-                "api",
-                "fluent",
-                "http",
-                "rest",
-                "sendgrid"
-            ],
-            "support": {
-                "issues": "https://github.com/sendgrid/php-http-client/issues",
-                "source": "https://github.com/sendgrid/php-http-client/tree/3.14.4"
-            },
-            "time": "2022-03-09T20:21:55+00:00"
-        },
-        {
-            "name": "sendgrid/sendgrid",
-            "version": "7.11.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sendgrid/sendgrid-php.git",
-                "reference": "1d2fd3b72687fe82264853a8888b014f8f99e81f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/1d2fd3b72687fe82264853a8888b014f8f99e81f",
-                "reference": "1d2fd3b72687fe82264853a8888b014f8f99e81f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "ext-openssl": "*",
-                "php": ">=5.6",
-                "sendgrid/php-http-client": "~3.10",
-                "starkbank/ecdsa": "0.*"
-            },
-            "replace": {
-                "sendgrid/sendgrid-php": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7.9 || ^6.4.3",
-                "squizlabs/php_codesniffer": "3.*",
-                "swaggest/json-diff": "^3.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SendGrid\\Mail\\": "lib/mail/",
-                    "SendGrid\\Stats\\": "lib/stats/",
-                    "SendGrid\\Helper\\": "lib/helper/",
-                    "SendGrid\\Contacts\\": "lib/contacts/",
-                    "SendGrid\\EventWebhook\\": "lib/eventwebhook/"
-                },
-                "classmap": [
-                    "lib/BaseSendGridClientInterface.php",
-                    "lib/SendGrid.php",
-                    "lib/TwilioEmail.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "This library allows you to quickly and easily send emails through Twilio SendGrid using PHP.",
-            "homepage": "http://github.com/sendgrid/sendgrid-php",
-            "keywords": [
-                "email",
-                "grid",
-                "send",
-                "sendgrid",
-                "twilio sendgrid"
-            ],
-            "support": {
-                "issues": "https://github.com/sendgrid/sendgrid-php/issues",
-                "source": "https://github.com/sendgrid/sendgrid-php/tree/7.11.5"
-            },
-            "time": "2022-03-09T20:21:56+00:00"
-        },
-        {
             "name": "sensio/framework-extra-bundle",
             "version": "v5.6.1",
             "source": {
@@ -1089,49 +802,6 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v5.6.1"
             },
             "time": "2020-08-25T19:10:18+00:00"
-        },
-        {
-            "name": "starkbank/ecdsa",
-            "version": "0.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/starkbank/ecdsa-php.git",
-                "reference": "484bedac47bac4012dc73df91da221f0a66845cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/starkbank/ecdsa-php/zipball/484bedac47bac4012dc73df91da221f0a66845cb",
-                "reference": "484bedac47bac4012dc73df91da221f0a66845cb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/ellipticcurve.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "StarkBank",
-                    "email": "developers@starkbank.com",
-                    "homepage": "https://starkbank.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "fast openSSL-compatible implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA)",
-            "homepage": "https://github.com/starkbank/ecdsa-php",
-            "support": {
-                "issues": "https://github.com/starkbank/ecdsa-php/issues",
-                "source": "https://github.com/starkbank/ecdsa-php/tree/v0.0.5"
-            },
-            "time": "2021-06-06T22:24:49+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3938,80 +3608,6 @@
             "time": "2020-06-18T21:17:00+00:00"
         },
         {
-            "name": "symfony/proxy-manager-bridge",
-            "version": "v5.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/proxy-manager-bridge.git",
-                "reference": "c9279782d3282fe69aff55dbe8d24939cac88f57"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/proxy-manager-bridge/zipball/c9279782d3282fe69aff55dbe8d24939cac88f57",
-                "reference": "c9279782d3282fe69aff55dbe8d24939cac88f57",
-                "shasum": ""
-            },
-            "require": {
-                "ocramius/proxy-manager": "~2.1",
-                "php": ">=7.2.5",
-                "symfony/dependency-injection": "^5.0"
-            },
-            "conflict": {
-                "zendframework/zend-eventmanager": "2.6.0"
-            },
-            "require-dev": {
-                "symfony/config": "^4.4|^5.0"
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\ProxyManager\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony ProxyManager Bridge",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/proxy-manager-bridge/tree/5.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-05-20T17:38:26+00:00"
-        },
-        {
             "name": "symfony/routing",
             "version": "v5.0.11",
             "source": {
@@ -4103,172 +3699,6 @@
                 }
             ],
             "time": "2020-06-18T18:18:56+00:00"
-        },
-        {
-            "name": "symfony/security-core",
-            "version": "v5.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-core.git",
-                "reference": "4e4c76fcb091e35aca0601fc337f0c2cf76885ab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/4e4c76fcb091e35aca0601fc337f0c2cf76885ab",
-                "reference": "4e4c76fcb091e35aca0601fc337f0c2cf76885ab",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/event-dispatcher-contracts": "^1.1|^2",
-                "symfony/service-contracts": "^1.1.6|^2"
-            },
-            "conflict": {
-                "symfony/event-dispatcher": "<4.4",
-                "symfony/ldap": "<4.4",
-                "symfony/security-guard": "<4.4"
-            },
-            "require-dev": {
-                "psr/container": "^1.0",
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "^4.4|^5.0",
-                "symfony/expression-language": "^4.4|^5.0",
-                "symfony/http-foundation": "^4.4|^5.0",
-                "symfony/ldap": "^4.4|^5.0",
-                "symfony/validator": "^4.4|^5.0"
-            },
-            "suggest": {
-                "psr/container-implementation": "To instantiate the Security class",
-                "symfony/event-dispatcher": "",
-                "symfony/expression-language": "For using the expression voter",
-                "symfony/http-foundation": "",
-                "symfony/ldap": "For using LDAP integration",
-                "symfony/validator": "For using the user password constraint"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Core\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - Core Library",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/security-core/tree/v5.0.11"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-06-25T09:01:55+00:00"
-        },
-        {
-            "name": "symfony/security-csrf",
-            "version": "v5.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/security-csrf.git",
-                "reference": "155a413dc29400e74d2c06f5581da795200386c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-csrf/zipball/155a413dc29400e74d2c06f5581da795200386c1",
-                "reference": "155a413dc29400e74d2c06f5581da795200386c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/security-core": "^4.4|^5.0"
-            },
-            "conflict": {
-                "symfony/http-foundation": "<4.4"
-            },
-            "require-dev": {
-                "symfony/http-foundation": "^4.4|^5.0"
-            },
-            "suggest": {
-                "symfony/http-foundation": "For using the class SessionTokenStorage."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Security\\Csrf\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Security Component - CSRF Library",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/security-csrf/tree/v5.0.9"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-05-20T17:38:26+00:00"
         },
         {
             "name": "symfony/serializer",
@@ -5425,63 +4855,53 @@
             "time": "2022-08-12T06:47:24+00:00"
         },
         {
-            "name": "webimpress/safe-writer",
-            "version": "2.2.0",
+            "name": "twilio/sdk",
+            "version": "6.42.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webimpress/safe-writer.git",
-                "reference": "9d37cc8bee20f7cb2f58f6e23e05097eab5072e6"
+                "url": "git@github.com:twilio/twilio-php.git",
+                "reference": "fff5abe683e7d51912ee782012684daa0959e45b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webimpress/safe-writer/zipball/9d37cc8bee20f7cb2f58f6e23e05097eab5072e6",
-                "reference": "9d37cc8bee20f7cb2f58f6e23e05097eab5072e6",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/fff5abe683e7d51912ee782012684daa0959e45b",
+                "reference": "fff5abe683e7d51912ee782012684daa0959e45b",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ^8.0"
+                "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5.4",
-                "vimeo/psalm": "^4.7",
-                "webimpress/coding-standard": "^1.2.2"
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpunit/phpunit": ">=7.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev",
-                    "dev-develop": "2.3.x-dev",
-                    "dev-release-1.0": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Webimpress\\SafeWriter\\": "src/"
+                    "Twilio\\": "src/Twilio/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause"
+                "MIT"
             ],
-            "description": "Tool to write files safely, to avoid race conditions",
-            "keywords": [
-                "concurrent write",
-                "file writer",
-                "race condition",
-                "safe writer",
-                "webimpress"
-            ],
-            "support": {
-                "issues": "https://github.com/webimpress/safe-writer/issues",
-                "source": "https://github.com/webimpress/safe-writer/tree/2.2.0"
-            },
-            "funding": [
+            "authors": [
                 {
-                    "url": "https://github.com/michalbundyra",
-                    "type": "github"
+                    "name": "Twilio API Team",
+                    "email": "api@twilio.com"
                 }
             ],
-            "time": "2021-04-19T16:34:45+00:00"
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "https://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2022-09-07T19:17:29+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -5543,6 +4963,254 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "monolog/monolog",
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0 || 2.0.0 || 3.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "elasticsearch/elasticsearch": "^7 || ^8",
+                "ext-json": "*",
+                "graylog2/gelf-php": "^1.4.2",
+                "guzzlehttp/guzzle": "^7.4",
+                "guzzlehttp/psr7": "^2.2",
+                "mongodb/mongodb": "^1.8",
+                "php-amqplib/php-amqplib": "~2.4 || ^3",
+                "phpspec/prophecy": "^1.15",
+                "phpstan/phpstan": "^0.12.91",
+                "phpunit/phpunit": "^8.5.14",
+                "predis/predis": "^1.1 || ^2.0",
+                "rollbar/rollbar": "^1.3 || ^2 || ^3",
+                "ruflin/elastica": "^7",
+                "swiftmailer/swiftmailer": "^5.3|^6.0",
+                "symfony/mailer": "^5.4 || ^6",
+                "symfony/mime": "^5.4 || ^6"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-curl": "Required to send log messages using the IFTTTHandler, the LogglyHandler, the SendGridHandler, the SlackWebhookHandler or the TelegramBotHandler",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
+                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
+                "ext-openssl": "Required to send log messages using SSL",
+                "ext-sockets": "Allow sending log messages to a Syslog server (via UDP driver)",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "https://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "https://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/2.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-07-24T11:55:47+00:00"
+        },
+        {
+            "name": "symfony/browser-kit",
+            "version": "v5.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/browser-kit.git",
+                "reference": "c46b676a993cc437bafe6fe0f30f074857cde2a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/c46b676a993cc437bafe6fe0f30f074857cde2a6",
+                "reference": "c46b676a993cc437bafe6fe0f30f074857cde2a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/dom-crawler": "^4.4|^5.0"
+            },
+            "require-dev": {
+                "symfony/css-selector": "^4.4|^5.0",
+                "symfony/http-client": "^4.4|^5.0",
+                "symfony/mime": "^4.4|^5.0",
+                "symfony/process": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\BrowserKit\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony BrowserKit Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/browser-kit/tree/v5.0.11"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-12T09:22:24+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v5.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "79c224cdbfae58d54b257a8c684ad445042c90f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/79c224cdbfae58d54b257a8c684ad445042c90f2",
+                "reference": "79c224cdbfae58d54b257a8c684ad445042c90f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/css-selector/tree/5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-20T17:38:26+00:00"
+        },
         {
             "name": "symfony/debug-bundle",
             "version": "v5.0.11",
@@ -5625,6 +5293,332 @@
                 }
             ],
             "time": "2020-05-20T17:38:26+00:00"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "v5.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dom-crawler.git",
+                "reference": "bbc756c0895d08a1e69a59d8541a647b47f5a732"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/bbc756c0895d08a1e69a59d8541a647b47f5a732",
+                "reference": "bbc756c0895d08a1e69a59d8541a647b47f5a732",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "masterminds/html5": "<2.6"
+            },
+            "require-dev": {
+                "masterminds/html5": "^2.6",
+                "symfony/css-selector": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/css-selector": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DomCrawler\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DomCrawler Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/dom-crawler/tree/5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-23T08:36:09+00:00"
+        },
+        {
+            "name": "symfony/monolog-bridge",
+            "version": "v5.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/monolog-bridge.git",
+                "reference": "d48bf711b47c6fa9a0df747a73ad4d45d8fc5409"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/monolog-bridge/zipball/d48bf711b47c6fa9a0df747a73ad4d45d8fc5409",
+                "reference": "d48bf711b47c6fa9a0df747a73ad4d45d8fc5409",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.25.1|^2",
+                "php": ">=7.2.5",
+                "symfony/http-kernel": "^4.4|^5.0",
+                "symfony/service-contracts": "^1.1|^2"
+            },
+            "conflict": {
+                "symfony/console": "<4.4",
+                "symfony/http-foundation": "<4.4"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0",
+                "symfony/http-client": "^4.4|^5.0",
+                "symfony/security-core": "^4.4|^5.0",
+                "symfony/var-dumper": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For the possibility to show log messages in console commands depending on verbosity settings.",
+                "symfony/http-kernel": "For using the debugging handlers together with the response life cycle of the HTTP kernel.",
+                "symfony/var-dumper": "For using the debugging handlers like the console handler or the log server handler."
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\Monolog\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Monolog Bridge",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/monolog-bridge/tree/v5.0.11"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-18T18:18:56+00:00"
+        },
+        {
+            "name": "symfony/monolog-bundle",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/monolog-bundle.git",
+                "reference": "a41bbcdc1105603b6d73a7d9a43a3788f8e0fb7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/a41bbcdc1105603b6d73a7d9a43a3788f8e0fb7d",
+                "reference": "a41bbcdc1105603b6d73a7d9a43a3788f8e0fb7d",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.22 || ^2.0 || ^3.0",
+                "php": ">=7.1.3",
+                "symfony/config": "~4.4 || ^5.0 || ^6.0",
+                "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0",
+                "symfony/http-kernel": "~4.4 || ^5.0 || ^6.0",
+                "symfony/monolog-bridge": "~4.4 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "symfony/console": "~4.4 || ^5.0 || ^6.0",
+                "symfony/phpunit-bridge": "^5.2 || ^6.0",
+                "symfony/yaml": "~4.4 || ^5.0 || ^6.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\MonologBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony MonologBundle",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "support": {
+                "issues": "https://github.com/symfony/monolog-bundle/issues",
+                "source": "https://github.com/symfony/monolog-bundle/tree/v3.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-10T14:24:36+00:00"
+        },
+        {
+            "name": "symfony/phpunit-bridge",
+            "version": "v6.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/phpunit-bridge.git",
+                "reference": "75c2fa71d049c1f48e39d208c0cefba97e66335a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/75c2fa71d049c1f48e39d208c0cefba97e66335a",
+                "reference": "75c2fa71d049c1f48e39d208c0cefba97e66335a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<7.5|9.1.2"
+            },
+            "require-dev": {
+                "symfony/deprecation-contracts": "^2.1|^3.0",
+                "symfony/error-handler": "^5.4|^6.0"
+            },
+            "suggest": {
+                "symfony/error-handler": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
+            },
+            "bin": [
+                "bin/simple-phpunit"
+            ],
+            "type": "symfony-bridge",
+            "extra": {
+                "thanks": {
+                    "name": "phpunit/phpunit",
+                    "url": "https://github.com/sebastianbergmann/phpunit"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Bridge\\PhpUnit\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides utilities for PHPUnit, especially user deprecation notices management",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/phpunit-bridge/tree/v6.1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-07-28T13:40:41+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -5783,7 +5777,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.0",
+        "php": ">=7.2.0",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },

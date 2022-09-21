@@ -31,5 +31,6 @@ RUN apt-get update \
 ### Coping vhost template within apache sites.
 COPY dockerization/web/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
+### Helper command to enter into the docker container termina: > docker exec -it web /bin/bash
 ### Exposing port 80 to the exterior.
 EXPOSE 80
