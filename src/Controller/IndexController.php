@@ -6,13 +6,11 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class holding the endpoint route to upload the image to Azure Blob Storage and the page to visualize the uploaded
- * image.
+ * Class holding the landing page to upload and render the image to/from Azure Blob Storage
  *
  * @package App\Controller
  */
@@ -24,15 +22,7 @@ class IndexController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('index.html.twig');
+        return $this->render('index/index.html.twig');
     }
 
-    /**
-     * Route definition to upload an image to Azure.
-     * @Route("/upload", name="upload")
-     */
-    public function upload(): JsonResponse
-    {
-        return new JsonResponse();
-    }
 }

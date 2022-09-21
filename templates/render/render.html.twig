@@ -1,0 +1,26 @@
+{% extends '/base.html.twig' %}
+
+{% set title = 'Render the Uploaded Image' %}
+
+{% blob content %}
+<div class="row">
+    <div class="col">
+        {% if imageBase64 is empty %}
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                    <use xlink:href="#exclamation-triangle-fill"/>
+                </svg>
+                <div>
+                    The Image has not been uploaded to Azure Blob Storage.
+                </div>
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-6 offset-3">
+                <img class="img-responsive" src="data:image/png;base64, {{ imageBase64 }}">
+            </div>
+        </div>
+        {% else %}
+    </div>
+</div>
+{% endblock %}

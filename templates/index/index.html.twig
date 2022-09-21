@@ -1,0 +1,25 @@
+{% extends '/base.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Visualize image</h5>
+                    <p class="card-text">To visualize the image go to <a href="{{ path('render_index') }}"
+                                                                         class="btn btn-primary">Visualize page</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Upload an image</h5>
+                    <p class="card-text">To upload the image go to <a href="{{ path('upload_index') }}"
+                                                                      class="btn btn-primary">Upload Image</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

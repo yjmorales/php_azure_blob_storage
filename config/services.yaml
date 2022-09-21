@@ -1,17 +1,58 @@
 parameters:
-
+    storageAccountName     : 'testsignature'
+    defaultEndpointProtocol: 'https'
+    containerName          : 'container-example'
+    clientId           : '5b7a2a0a-042e-4d69-8088-53fcf5e9605a'
+    tenantId           : 'a84cd936-3cb4-4d07-b1d5-a93d8a5eab56'
+    clientSecret       : '-_48Q~BY4sqatQEbXhwUwfzjpYnGCVxp09Elxb-Q'
+    
 services:
     _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        autowire: true
+        autoconfigure: true
+        public: fals
 
     App\:
         resource: '../src/'
         exclude:
-            - '../src/DependencyInjection/'
-            - '../src/Entity/'
+
             - '../src/Kernel.php'
 
     App\Controller\:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
+
+    CacheRegistry:
+        class: App\Service\CacheRegistry
+        public: true
+        arguments:
+            - '%redis_host%'
+            - cache_
+            - '%redis_password%'
+            - '%redis_port%'
+
+    UploadCache:
+        class: App\Service\UploadCache
+        public: true
+        arguments:
+            - '@CacheRegistry'
+            - 1200 # 20 minutes in seconds.
+
+    BlobStorageManager:
+        class: App\Service\BlobStorageManager
+        public: true
+        arguments:
+            - '@BlobStorageAuthenticator'
+            - '%containerName%'
+            - '@kernel'
+
+    BlobStorageAuthenticator:
+        class: App\Service\BlobStorageAuthenticator
+        public: true
+        arguments:
+            - '%storageAccountName%'
+            - '%defaultEndpointProtocol%'
+            - '@UploadCache'
+            - '%clientId%'
+            - '%tenantId%'
+            - '%clientSecret%'
