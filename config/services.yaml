@@ -10,7 +10,7 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-        public: fals
+        public: false
 
     App\:
         resource: '../src/'
