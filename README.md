@@ -7,14 +7,14 @@ The approach to solve the problem is:
 1. An endpoint to upload the image.
 2. A page to visualize the uploaded image.
 
-It consists in a small symfony app holding both, the endpoint and the visualization page.
+This project consists in a small symfony app holding both of them; the endpoint and the visualization page.
 
 ### Important Note:
 
 This project assumes you are subscribed to Azure Blob Storage service and:
 
 1. A storage account is created and configured correctly.
-2. The authentication/authorization is by using Azure Active Directory service. 
+2. The authentication/authorization is done by using Azure Active Directory service. 
 3. The authentication by Key Access must be disabled. It's not a good practice in 
 terms of security.
 4. The following config values are required by this project:
@@ -34,17 +34,17 @@ terms of security.
     
 ### Virtual host
 
-In case this site is hosted by apache, the following is the VHost configuration:
+In case this example is hosted by apache, the following is a VHost configuration example you can use:
 
     <VirtualHost *:80>
-        ServerName myazureblobstorage.yjm
-        ServerAlias www.myazureblobstorage.yjm
+        ServerName myazureblobstorage.com
+        ServerAlias www.myazureblobstorage.com
         DirectoryIndex index.php
-        ServerAdmin yjmorales86@gmail.com
-        DocumentRoot "/var/www/html/personal_page/public"
+        ServerAdmin email@domain.com
+        DocumentRoot "/var/www/html/php_azure_blob_storage/public"
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-        <Directory "/var/www/html/personal_page/public">
+        <Directory "/var/www/html/php_azure_blob_storage/public">
             Options Indexes FollowSymLinks MultiViews
             AllowOverride All
             Order allow,deny
@@ -58,25 +58,23 @@ In case this site is hosted by apache, the following is the VHost configuration:
         </Directory>
     </VirtualHost>
 
+Note: The above config is just an example. 
+
 ### Update /etc/hosts file
 
 In case apache is running on the same development station a new entry to the local
 host file is needed:
 
-{local_ip} yenierjimenez.yjm
+{local_ip} myazureblobstorage.com
 
 Where **local_ip** is the ip of the local server ip
 
 ### Implementation - Endpoint
 
-Endpoint: 
+- **Endpoint:** https://myazureblobstorage.com/upload
+- **Method:** POST
+- Payload:
 
-    https://myazureblobstorage.yjm/upload
-
-Method: 
-
-    POST
-Payload:
 
     {
         "imageBase64": "<image_base_64_content>"
@@ -84,7 +82,8 @@ Payload:
 
 Where `image_base_64_content` should be a valid base64 image content. 
     
-Response: The response is a JSON response:
+- **Response:** The response is a JSON response:
+
 
     {
         'success': true|false,
@@ -95,5 +94,13 @@ Response: The response is a JSON response:
 
 ### Implementation - Page to Visualize the uploaded image
 
-     myazureblobstorage.yjm/
+     myazureblobstorage.com/
 
+
+### Contact me
+
+Yenier Jimenez
+<br>
+http://yenierjimenez.com
+<br>
+yjmorales86@gmail.com
